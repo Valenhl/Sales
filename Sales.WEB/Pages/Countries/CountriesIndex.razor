@@ -1,4 +1,6 @@
 ﻿@page "/countries"
+@using Sales.Shared;
+@using Sales.WEB.Repositories;
 @inject IRepository repository
 
 <h3>Países</h3>
@@ -9,7 +11,7 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>País</th>
+                    <th>Países</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,11 +19,11 @@
                 {
                     <tr>
                         <td>
-                            <a class="btn btn-warning">Editar</a>
-                            <button class="btn btn-danger">Borrar</button>
+                            @country.Name
                         </td>
                         <td>
-                            @country.Name
+                            <a class="btn btn-warning">Editar</a>
+                            <button class="btn btn-danger">Borrar</button>
                         </td>
                     </tr>
                 }
@@ -35,8 +37,12 @@
 
     protected override async Task OnInitializedAsync()
     {
+        await LoadAsync();
+    }
+
+    private async Task LoadAsync()
+    {
         var responseHttp = await repository.Get<List<Country>>("/api/countries");
         Countries = responseHttp.Response;
-
     }
 }
