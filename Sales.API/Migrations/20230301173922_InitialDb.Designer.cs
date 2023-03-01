@@ -11,7 +11,7 @@ using Sales.API.Data;
 namespace Sales.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230226205738_InitialDb")]
+    [Migration("20230301173922_InitialDb")]
     partial class InitialDb
     {
         /// <inheritdoc />
