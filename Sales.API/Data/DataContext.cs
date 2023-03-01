@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Sales.Shared;
 using Sales.Shared.Entities;
 
 namespace Sales.API.Data
@@ -11,11 +10,14 @@ namespace Sales.API.Data
         }
 
         public DbSet<Country> Countries { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Country>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Category>().HasIndex(x => x.Name).IsUnique();
+
         }
     }
 }
