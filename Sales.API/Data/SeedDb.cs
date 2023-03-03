@@ -33,9 +33,16 @@ namespace Sales.API.Data
         {
             if (!_context.Categories.Any())
             {
-                _context.Categories.Add(new Category { Name = "Colores" });
-                _context.Categories.Add(new Category { Name = "Números" });
-                _context.Categories.Add(new Category { Name = "Letras" });
+                _context.Categories.Add(new Category { Name = "Televisores" });
+                _context.Categories.Add(new Category { Name = "Celulares" });
+                _context.Categories.Add(new Category { Name = "Computadores" });
+                _context.Categories.Add(new Category { Name = "Moda" });
+                _context.Categories.Add(new Category { Name = "Jugueteria" });
+                _context.Categories.Add(new Category { Name = "Deporte" });
+                _context.Categories.Add(new Category { Name = "Hogar" });
+                _context.Categories.Add(new Category { Name = "Cuidado personal" });
+                _context.Categories.Add(new Category { Name = "Cocina" });
+                _context.Categories.Add(new Category { Name = "Libros" });
                 await _context.SaveChangesAsync();
             }
         }
