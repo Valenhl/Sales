@@ -55,6 +55,28 @@ namespace Sales.API.Data
                 _context.Categories.Add(new Category { Name = "Tacones" });
                 _context.Categories.Add(new Category { Name = "Medias" });
                 _context.Categories.Add(new Category { Name = "Viajes" });
+                _context.Categories.Add(new Category { Name = "Luces" });
+                _context.Categories.Add(new Category { Name = "Hamacas" });
+                _context.Categories.Add(new Category { Name = "Mecedores" });
+                _context.Categories.Add(new Category { Name = "Muebles" });
+                _context.Categories.Add(new Category { Name = "Materas" });
+                _context.Categories.Add(new Category { Name = "Pelotas" });
+                _context.Categories.Add(new Category { Name = "Barbies" });
+                _context.Categories.Add(new Category { Name = "Ollas" });
+                _context.Categories.Add(new Category { Name = "Nevera" });
+                _context.Categories.Add(new Category { Name = "Duchas" });
+                _context.Categories.Add(new Category { Name = "Maletas" });
+                _context.Categories.Add(new Category { Name = "Cortinas" });
+                _context.Categories.Add(new Category { Name = "Pantallas" });
+                _context.Categories.Add(new Category { Name = "Color" });
+                _context.Categories.Add(new Category { Name = "Libretas" });
+                _context.Categories.Add(new Category { Name = "Cafeteria" });
+                _context.Categories.Add(new Category { Name = "Bar" });
+                _context.Categories.Add(new Category { Name = "Supermercados" });
+                _context.Categories.Add(new Category { Name = "Joyas" });
+                _context.Categories.Add(new Category { Name = "Bicicletas" });
+                _context.Categories.Add(new Category { Name = "Avión" });
+                _context.Categories.Add(new Category { Name = "Crucero" });
                 await _context.SaveChangesAsync();
             }
         }
